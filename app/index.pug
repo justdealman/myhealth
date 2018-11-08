@@ -1,0 +1,108 @@
+doctype html
+html(lang='ru')
+	title Моё здоровье
+	meta(charset='utf-8')
+	meta(name='viewport', content='width=device-width, user-scalable=yes')
+	link(href='./css/style.css', rel='stylesheet')
+	body
+		include modules/header.pug
+		.wrapper
+			section.hero
+				.hero__item
+					.hero__content
+						h2.title-h2 Расширяем возможности предоставления качественных медицинских услуг
+						p «Дневник здоровья» – новый сервис для самоконтроля показателей состояния здоровья, разработанный для участников программы «Мое здоровье».
+						button.btn.btn_red.btn_animated-width Узнать больше
+					.hero--bg
+						img.img-cover(src='./pic/hero-1.jpg', width='1920', height='751', alt='')
+				.hero__item
+					.hero__content
+						h2.title-h2 Следить за здоровьем станет проще
+						p Скоро вы сможете находиться на связи со своим лечащим врачом независимо от своего местоположения, вести дневник мониторинга самочувствия, получать рекомендации по плану лечения и многое другое.
+						button.btn.btn_red.btn_animated-width Узнать больше
+					.hero--bg
+						img.img-cover(src='./pic/hero-2.jpg', width='1920', height='751', alt='')
+			section.about
+				.about__row
+					.about__pic
+						img(src='./pic/smartphone.png', width='370', height='652', alt='')
+					.about__content
+						h2.title-h2 Что такое «Дневник здоровья»?
+						p Дневник пациента — это удобный онлайн-сервис:
+						ul.list
+							li Вносите результаты измерений вручную или с помощью интегрированных приборов
+							li Ведите персональную медицинскую карту с историей ваших измерений 
+							li Делитесь результатами измерений со специалистами для повышения эффективности лечения
+							li Получайте рекомендации, созданные специально для вас
+						button.btn.btn_red Оставить заявку
+			section.functional
+				.functional__row
+					span.title-h2(align='center') Функции приложения
+					.functional__grid
+						.functional__item
+							.functional__icon
+								include img/icon-medicine.svg
+							span.functional__text Планирование графика #[br] приема лекарств
+						.functional__item
+							.functional__icon
+								include img/icon-siren.svg
+							span.functional__text Уведомление врача #[br] об исполнении назначений
+						.functional__item
+							.functional__icon
+								include img/icon-health.svg
+							span.functional__text Ведение дневника #[br] самочувствия
+						.functional__item
+							.functional__icon
+								include img/icon-smartwatch.svg
+							span.functional__text Удаленное предоставление измерений врачу
+						.functional__item
+							.functional__icon
+								include img/icon-conversation.svg
+							span.functional__text Общение с врачами через встроенный мессенджер
+						.functional__item
+							.functional__icon
+								include img/icon-notification.svg
+							span.functional__text Получение уведомлений для выполнения назначений
+			section.diary
+				.diary__row
+					span.title-h2(align='center') Ведите персональный дневник мониторинга здоровья
+					.diary__grid
+						.diary__content
+							ul.diary__list
+								li
+									span.diary__list--num 1
+									span.diary__list--title Хранение данных
+									p Контролируйте и следите за динамикой изменения показателей вашего здоровья. Вносите результаты измерений медицинских показателей вручную или с помощью интегрированных приборов, храните историю измерений и отслеживайте динамику состояния здоровья
+								li
+									span.diary__list--num 2
+									span.diary__list--title Сообщение информации врачу
+									p Позвольте специалисту дистанционно следить за вашим здоровьем. #[br] Будьте на связи со специалистом - отправляйте информацию о своем самочувствии, обменивайтесь сообщениями и получайте рекомендации по вашему здоровью и лечению.
+								li
+									span.diary__list--num 3
+									span.diary__list--title Напоминание о важном
+									p Получайте рекомендации, созданные специально для вас. #[br] Система, персонально настроенная под ваши требования, автоматически напомнит о необходимости выполнить рекомендации медицинского специалиста: принять препарат или выполнить измерения.
+						.diary__pic
+							img(src='./pic/mockups.png', width='611', height='608', alt='')
+			section.specialists
+				.specialists__row
+					.specialists__col
+						.specialists__content
+							span.title-h2 Специалистам
+							ul.list
+								li Дистанционный контроль состояния здоровья ваших пациентов
+								li Наблюдение за динамикой изменения основных #[br] медицинских показателей 
+								li Наличие алгоритмов автоматического анализа #[br] поступающей информации
+								li Индивидуальная система уведомлений об изменении #[br] состояния каждого пациента
+								li Дополнительный сервис коммуникации, позволяющий активно #[br] вовлекать пациента в процесс профилактики, лечения и реабилитации.
+				img.specialists--pic(src='./pic/tablet.png', width='976', height='640', alt='')
+			section.access
+				.access__row
+					.access__content
+						span.title-h2 Получите бесплатный доступ к «Дневнику здоровья»
+						p Оставьте свою электронную почту #[br] и вы узнаете о запуске данного сервиса первым!
+						.access__form
+							input(type='text', placeholder='Ваш E-mail')
+							button.btn.btn_red Отправить
+			include modules/footer.pug
+		script(src='./js/libs.js')
+		script(src='./js/scripts.js')
